@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@mixin flex($ai, $jc){
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@function rem($size) {
+  @return math.div($size, $f-base)+rem;
+}
+
+@function lineHeight($size, $lh) {
+  @return math.div($lh, $size)
+}
