@@ -1,0 +1,51 @@
+.header{
+  border-bottom: 1px solid var(--secondary10);
+  background-color: var(--white);
+  padding: rem(20) rem(30);
+
+  &__container{
+    @extend %container;
+    @include flex(center, space-between);
+  }
+
+  &__login{
+    @include flex(center, space-between);
+  }
+
+}
+
+.user{
+  @include flex(center, space-between);
+
+  &__avatar{
+    width: rem(32);
+    height: rem(32);
+    margin-right: 5px;
+  }
+
+  &__name{
+    font-size: rem(14);
+    margin: 0;
+
+    &--login{
+      font-size: rem(13);
+      cursor: pointer;
+    }
+  }
+
+  &__activity{
+    margin-right: rem(30);
+  }
+
+  &__dropdown{
+    padding: 0 rem(8);
+  }
+
+  &__icon{
+    &--login{
+      width: rem(12);
+      height: rem(6);
+    }
+  }
+  
+}

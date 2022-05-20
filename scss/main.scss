@@ -21,18 +21,4 @@ main{
   @extend %container;
 }
 
-.header{
-  border-bottom: 1px solid var(--secondary10);
-  background-color: var(--white);
-  padding: rem(20) rem(30);
-
-  &__container{
-    @extend %container;
-    @include flex(center, space-between);
-  }
-
-  &__login{
-    @include flex(center, space-between);
-  }
-
-}
+@import 'partials/header';
