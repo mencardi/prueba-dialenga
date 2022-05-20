@@ -35,6 +35,69 @@
 
   <main>
 
+    <nav class="nav">
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-dashboard.svg" alt="Inicio" class="nav__icon">
+        <span class="nav__text">Inicio</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-messages.svg" alt="" class="nav__icon">
+        <span class="nav__text">Mensajes</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-dialogs.svg" alt="" class="nav__icon">
+        <span class="nav__text">Cuestionarios</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-knowledge.svg" alt="" class="nav__icon">
+        <span class="nav__text">Centro de conocimiento</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-conversations.svg" alt="" class="nav__icon">
+        <span class="nav__text">Conversaciones</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-payroll.svg" alt="" class="nav__icon">
+        <span class="nav__text">Nóminas y documentos</span>
+      </a>
+
+      <a href="#" class="nav__link nav__link--active">
+        <img src="/img/menu-signature.svg" alt="" class="nav__icon">
+        <span class="nav__text">Firma remota</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-vacations.svg" alt="" class="nav__icon">
+        <span class="nav__text">Tiempo libre</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-groups.svg" alt="" class="nav__icon">
+        <span class="nav__text">Usuarios</span>
+      </a>
+
+      <a href="#" class="nav__link">
+        <img src="/img/menu-statistics.svg" alt="" class="nav__icon">
+        <span class="nav__text">Estadísticas</span>
+      </a>
+
+      <a href="#" class="nav__link nav__link--bottom">
+        <img src="/img/menu-settings.svg" alt="" class="nav__icon">
+        <span class="nav__text">Configuración</span>
+      </a>
+
+      <button class="nav__minimize">
+        <img src="/img/minimize-arrow.svg" alt="Plegar menú" class="nav__minicon">
+      </button>
+
+    </nav>
+
     <article class="content">
 
       <header class="content__header">
@@ -70,48 +133,89 @@
         </div>
       </section>
 
-      <table class="docs">
-        <thead>
-          <tr>
-            <th>Documento</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
-              <p class="docs__text">Contrato_Josefa_Blanco_Holgado.pdf</p>
-            </td>
-            <td>
-              <span class="docs__signed">Firmado</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
-              <p class="docs__text">Acuerdo_de_Confidencialidad_Josefa_Blanco_Holgado.pdf</p>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
-              <p class="docs__text">RGPD_Josefa_Blanco_Holgado.pdf</p>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
-              <p class="docs__text">Anexo_I_Josefa_Blanco_Holgado.pdf</p>
-            </td>
-            <td>
-              <span class="docs__signed">Firmado</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- <section class="docs">
+        <h2 class="docs__title">Documentos incluidos en el envío</h2>
+        <ul class="docs__list">
+          <li class="docs__item docs__item--header">
+            <p class="docs__heading">Documento</p>
+            <p class="docs__heading">Estado</p>
+          </li>
+          <li class="docs__item">
+            <img src="" alt="" class="docs__icon">
+            <p class="docs__text"></p>
+            <span class="docs__state"></span>
+          </li>
+          <li class="docs__item">
+            <img src="" alt="" class="docs__icon">
+            <p class="docs__text"></p>
+            <span class="docs__state"></span>
+          </li>
+          <li class="docs__item">
+            <img src="" alt="" class="docs__icon">
+            <p class="docs__text"></p>
+            <span class="docs__state"></span>
+          </li>
+          <li class="docs__item">
+            <img src="" alt="" class="docs__icon">
+            <p class="docs__text"></p>
+            <span class="docs__state"></span>
+          </li>
+          <li class="docs__item">
+            <img src="" alt="" class="docs__icon">
+            <p class="docs__text"></p>
+            <span class="docs__state"></span>
+          </li>
+
+
+        </ul>
+
+      </section> -->
+
+      <section class="docs">
+        <h2 class="docs__title">Documentos incluidos en el envío</h2>
+        <table class="table">
+          <thead>
+            <tr class="table__row table__row--noborder">
+              <th class="table__title">Documento</th>
+              <th class="table__title">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__row">
+              <td class="table__item">
+                <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon docs__icon--turq">
+                <p class="docs__text">Contrato_Josefa_Blanco_Holgado.pdf</p>
+              </td>
+              <td>
+                <span class="docs__signed">Firmado</span>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">
+                <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon docs__icon--purple">
+                <p class="docs__text">Acuerdo_de_Confidencialidad_Josefa_Blanco_Holgado.pdf</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">
+                <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon docs__icon--pink">
+                <p class="docs__text">RGPD_Josefa_Blanco_Holgado.pdf</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__item">
+                <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon docs__icon--blue">
+                <p class="docs__text">Anexo_I_Josefa_Blanco_Holgado.pdf</p>
+              </td>
+              <td>
+                <span class="docs__signed">Firmado</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
     </article>
 

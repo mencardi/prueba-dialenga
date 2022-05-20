@@ -5,6 +5,8 @@
 @import 'base/extends';
 @import 'base/common';
 
+@import 'partials/header';
+
 @import 'partials/users';
 
 body{
@@ -14,8 +16,6 @@ body{
   flex-direction: column;
 }
 
-@import 'partials/header';
-
 main{
   flex: 1;
   width: 100%;
@@ -23,6 +23,53 @@ main{
   display: grid;
   grid-template-columns: rem(252) 1fr rem(340);
   @extend %container;
+}
+
+.nav{
+  background-color: var(--grey-bg);
+  padding: rem(27) rem(20) rem(11) 0;
+  display: flex;
+  flex-direction: column;
+
+  &__link{
+    @include flex(center, flex-start);
+    width: 100%;
+    height: rem(40);
+    margin-bottom: rem(10);
+    padding: 0 rem(25);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--black45);
+    font-size: rem(10);
+
+    &--active{
+      color: var(--black);
+      position: relative;
+
+      &::before{
+        @extend %pseudo;
+        width: rem(4);
+        height: 100%;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 0;
+        border-radius: 0px rem(3) rem(3) 0px;      
+      }
+    }
+
+    &--bottom{
+      margin-top: auto;
+    }
+  }
+
+  &__icon{
+    margin-right: rem(15);
+  }
+
+  &__minimize{
+    margin-left: auto;
+    margin-top: rem(10);
+  }
 }
 
 .content{
@@ -53,3 +100,156 @@ main{
   }
 
 }
+
+.card{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(180);
+  padding: rem(16) rem(24);
+  background: var(--white);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.14);
+  border-radius: rem(3);
+  margin-bottom: rem(37);
+
+  &__title{
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: lineHeight(14, 22);
+    margin: 0 0 rem(8);
+    color: var(--black45);
+  }
+
+}
+
+.progress{
+  @include flex(center, flex-start);
+  
+  &__bar{
+    width: rem(135);
+    height: rem(8);
+    background: var(--grey10);
+    border-radius: rem(4);
+    margin-right: rem(18);
+  }
+
+  &__fill{
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-color: var(--black);
+    border-radius: rem(4);
+
+  }
+
+  &__text{
+    display: inline-block;
+    color: var(--black85);
+    font-size: rem(14);
+    margin: 0;
+  }
+}
+
+.docs{
+
+  &__title{
+    @extend %title;
+    margin-bottom: rem(21);
+  }
+
+  &__icon{
+    border-radius: rem(4);
+    width: rem(28);
+    height: rem(28);
+    margin-right: rem(8);
+
+    &--turq{
+      background-color: var(--turquoise);
+    }
+
+    &--purple{
+      background-color: var(--purple);
+    }
+
+    &--pink{
+      background-color: var(--pink);
+    }
+
+    &--blue{
+      background-color: var(--cyan);
+    }
+
+  }
+
+  &__text{
+    margin: 0;
+    font-size: rem(13);
+    color: var(--black85);
+    line-height: lineHeight(13,18);
+  }
+
+  &__signed{
+    font-weight: 700;
+    font-size: rem(10);
+    line-height: lineHeight(10,10);
+    padding: rem(4) rem(8);
+    background: var(--accepted);
+    border-radius: rem(3);
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}
+
+.table{
+
+  &__row{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: rem(1) solid #F5F5F5;
+    border-collapse: collapse;
+
+    &--noborder{
+      border: 0;
+    }
+
+  }
+
+  &__title{
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: lineHeight(14,22);
+    color: var(--black45);
+    text-align: left;
+    padding: rem(12) rem(20);
+  }
+  
+  &__item{
+    @include flex(center, flex-start);
+  }
+
+  td{
+    padding: rem(12) rem(20);
+  }
+
+}
+
+
+
+
+
+// .click{
+//   padding: 0.2rem;
+  
+// }
+
+// .cuadro{
+//   width: 100px;
+//   background-color: red;
+//   aspect-ratio: 1 / 1;
+//   transform: translateX(0);
+
+//   &:target{
+//     transform: translateX(100%);
+//     background-color: black;
+//   }
+// }
+
