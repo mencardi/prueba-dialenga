@@ -1,0 +1,47 @@
+.user{
+  @include flex(center, flex-start);
+  flex-wrap: wrap;
+  color: var(--black85);
+
+  &__avatar{
+    @extend %rounded;
+    margin-right: rem(8);
+  }
+
+  &__name{
+    font-size: rem(14);
+    line-height: lineHeight(14, 22);
+    margin: 0;
+
+    &--login{
+      font-size: rem(13);
+      color: var(--black60);
+      cursor: pointer;
+    }
+
+  }
+  
+  &__email{
+    display: block;
+    font-weight: 400;
+    font-size: rem(12);
+    color: var(--black60);
+    margin: rem(-5) 0 0 rem(40);
+  }
+
+  &__activity{
+    margin-right: rem(30);
+  }
+
+  &__dropdown{
+    padding: 0 rem(8);
+  }
+
+  &__icon{
+    &--login{
+      width: rem(12);
+      height: rem(6);
+    }
+  }
+  
+}

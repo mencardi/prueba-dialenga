@@ -1,5 +1,5 @@
 %container{
-  max-width: 1340px;
+  max-width: 1342px;
   margin: 0 auto;
   height: 100%;
   padding: 0;
@@ -39,4 +39,9 @@
 %pseudo{
   content: '';
   display: block;
+}
+
+%rounded{
+  width: rem(32);
+  height: rem(32);
 }
