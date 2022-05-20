@@ -1,6 +1,7 @@
 .header{
   border-bottom: 1px solid var(--secondary10);
   background-color: var(--white);
+  z-index: 100;
   
   &__container{
     @extend %container;

@@ -23,6 +23,8 @@ main{
   display: grid;
   grid-template-columns: rem(252) 1fr rem(340);
   @extend %container;
+  position: relative;
+  overflow: hidden;
 }
 
 .nav{
@@ -185,6 +187,10 @@ main{
     font-size: rem(13);
     color: var(--black85);
     line-height: lineHeight(13,18);
+
+    .table__row:hover &{
+      color: #fff;
+    }
   }
 
   &__signed{
@@ -206,9 +212,17 @@ main{
     grid-template-columns: 2fr 1fr;
     border: rem(1) solid #F5F5F5;
     border-collapse: collapse;
+    
+    &:hover{
+      background-color: var(--secondary);
+    }
 
     &--noborder{
       border: 0;
+
+      &:hover{
+        background-color: transparent;
+      }
     }
 
   }
@@ -280,24 +294,19 @@ main{
   }
 }
 
+.activity{
+  position: fixed;
+  top: rem(75);
+  right: 0;
+  width: rem(340);
+  height: 100%;
+  background-color: var(--white);
+  border-left: 1px solid var(--black15);
+  transform: translateX(100%);
+  transition: .2s ease;
 
+  &:target{
+    transform: translateX(0);
+  }
 
-
-
-// .click{
-//   padding: 0.2rem;
-  
-// }
-
-// .cuadro{
-//   width: 100px;
-//   background-color: red;
-//   aspect-ratio: 1 / 1;
-//   transform: translateX(0);
-
-//   &:target{
-//     transform: translateX(100%);
-//     background-color: black;
-//   }
-// }
-
+}
