@@ -37,9 +37,141 @@
 
     <nav class="nav"></nav>
 
-    <article class="content"></article>
+    <article class="content">
 
-    <aside class="summary"></aside>
+      <header class="content__header">
+        <button class="button">
+          <img src="/img/back.svg" alt="Volver">
+        </button>
+        <h1 class="content__heading">Detalle de envío</h1>
+
+        <section class="content__actions">
+          <button class="button"><img src="/img/send-reminder.svg" alt="Recordatorio"></button><button class="button"><img src="/img/delete.svg" alt="Eliminar"></button>
+        </section>        
+
+      </header>
+
+      <section class="card">
+        <div class="card__col">
+          <h2 class="card__title">Firmante</h2>
+          <section class="user">
+            <img src="/img/user-login.png" alt="Virginia Ramos del Río" class="user__avatar">
+            <p class="user__name">Joseda Blanco Holgado</p>
+            <p class="user__email">josefa.blanco@company.com</p>
+          </section>
+        </div>
+        <div class="card__col">
+          <h2 class="card__title">Progreso</h2>
+          <section class="card__progress">
+            <div class="progress">
+              <div class="progress__bar"><span class="progress__fill"></span></div>
+              <p class="progress__text">2 de 4</p>
+            </div>
+          </section>        
+          
+        </div>
+      </section>
+
+      <table class="docs">
+        <thead>
+          <tr>
+            <th>Documento</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
+              <p class="docs__text">Contrato_Josefa_Blanco_Holgado.pdf</p>
+            </td>
+            <td>
+              <span class="docs__signed">Firmado</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
+              <p class="docs__text">Acuerdo_de_Confidencialidad_Josefa_Blanco_Holgado.pdf</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
+              <p class="docs__text">RGPD_Josefa_Blanco_Holgado.pdf</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="/img/doc-signed.svg" alt="Firmado" class="docs__icon">
+              <p class="docs__text">Anexo_I_Josefa_Blanco_Holgado.pdf</p>
+            </td>
+            <td>
+              <span class="docs__signed">Firmado</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </article>
+
+    <aside class="summary">
+
+      <h2 class="summary__title">Resumen</h2>
+
+      <section class="summary__section">
+
+        <article class="summary__item">
+          <h3 class="summary__text">Fecha de envío</h3>
+          <p class="summary__value">27/02/2021 10:45</p>
+        </article>
+
+        <article class="summary__item">
+          <h3 class="summary__text">Tel. Móvil firmante</h3>
+          <p class="summary__value">655 547 854</p>
+        </article>
+
+      </section>
+
+      <section class="summary__section">
+
+        <article class="summary__item">
+          <h3 class="summary__text">Recordatorio</h3>
+          <p class="summary__value">Cada 48 horas</p>
+        </article>
+
+        <article class="summary__item">
+          <h3 class="summary__text">Fecha de expiración</h3>
+          <p class="summary__value">No expira</p>
+        </article>
+
+      </section>
+
+      <section class="summary__section">
+
+        <article class="summary__item">
+          <h3 class="summary__text">Enviado por</h3>
+          <section class="user">
+            <img src="/img/user-login.png" alt="Emilio Alonso Díaz" class="user__avatar">
+            <p class="user__name">Emilio Alonso Díaz</p>
+          </section>
+        </article>
+
+        <article class="summary__item">
+          <h3 class="summary__text">Asunto</h3>
+          <p class="summary__value">Onboarding: Solicitud de firma de documentos</p>
+        </article>
+
+        <article class="summary__item">
+          <h3 class="summary__text">Mensaje</h3>
+          <p class="summary__value">Para formalizar el onboarding debes firmar los 4 documentos antes...</p>
+        </article>
+
+      </section>
+
+    </aside>
 
   </main>
 
